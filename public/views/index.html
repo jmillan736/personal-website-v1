@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeff's Website</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/playlist_style.css">
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav-list">
+            <li><a href="../views/index.html">Home</a></li>
+            <li><a href="../views/projects.html">Projects</a></li>
+            <li><a href="../views/contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="home-page">
+        <div>
+            <h1>Jeffrey Millan</h1>
+
+            <h2>ABOUT ME</h2>
+        
+            <p>Im a 4th year student at UC Berkeley, majoring in EECS. <br>
+                My focus are software development, data management, and machine learning. <br>
+                On the side, I like to workout in the gym and get better at soccer.
+            </p>
+            <p>Here is a link to my favorite song right now: <a href="https://www.youtube.com/watch?v=9bxODbJ-VqE&ab_channel=MIKE">No, No! By MIKE</a> </p>
+
+        
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-container">
+                    <h3>CS188: Intro. to A.I. - Project 1: Search</h3>
+                    <p>Implementating search algorithms using Pacman</p>
+                    <a href="projects.html">Learn More</a>
+                </div>
+                <div class="project-container">
+                    <h3>CS188: Intro. to A.I. - Project 2: Multiagent Search </h3>
+                    <p>Finding the most optimal move for our pacman, assuming the ghost are also playing optimally :(</p>
+                    <a href="projects.html">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <img src="../Images/penguin.gif"/>
+    </div>
+    <!-- Source: https://www.geeksforgeeks.org/create-a-music-player-using-javascript/  -->
+    <button class="upper-right-button" onclick="showPlayer()">Close Playlist</button>
+    <div class="player">
+ 
+        <!-- Define the section for displaying details -->
+        <div class="details">
+          <div class="track-art">
+          </div>
+          <div class="track-name">Track Name</div>
+          <div class="track-artist">Track Artist</div>
+        </div>
+     
+        <!-- Define the section for displaying track buttons -->
+        <div class="buttons">
+          <div class="prev-track" onclick="prevTrack()">
+            <i class="fa fa-step-backward fa-2x"></i>
+          </div>
+          <div class="playpause-track" onclick="playpauseTrack()">
+            <i class="fa fa-play-circle fa-5x"></i>
+          </div>
+          <div class="next-track" onclick="nextTrack()">
+            <i class="fa fa-step-forward fa-2x"></i>
+          </div>
+        </div>
+     
+        <!-- Define the section for displaying the seek slider-->
+        <div class="slider_container">
+          <div class="current-time">00:00</div>
+          <input type="range" min="1" max="100"
+            value="0" class="seek_slider" onchange="seekTo()">
+          <div class="total-duration">00:00</div>
+        </div>
+     
+        <!-- Define the section for displaying the volume slider-->
+        <div class="slider_container">
+          <i class="fa fa-volume-down"></i>
+          <input type="range" min="1" max="100"
+            value="99" class="volume_slider" onchange="setVolume()">
+          <i class="fa fa-volume-up"></i>
+        </div>
+      </div>
+     
+      <!-- Load the main script for the player -->
+      <script src="../js/playlist.js"></script>
+</body>
+</html>

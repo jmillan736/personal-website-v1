@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="nav-list">
+            <li><a href="../views/index.html">Home</a></li>
+            <li><a href="../views/projects.html">Projects</a></li>
+            <li><a href="../views/contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div class="projects-container">
+        <div class="project-container">
+            <h3>CS188: Intro. to A.I. - Project 1: Search</h3>
+            <p>This project focuses on implementing search algorithms for the game Pacman. 
+                At first, I implemented DFS and BFS, building up to more complex algorithms like uniform-cost search and A*. 
+                I also completed specific tasks in the game such as finding a fixed food dot, varying the cost function, and finding paths that touch all four corners of the maze, and a greedy algorithm that eats the closest dot.
+                What made this project memorable to me was not so much figuring the correct heuristics, but more so the visual aspect of the project as you can see what path pacman takes when searching. </p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">GitHub Link</a>
+        </div>
+        <div class="project-container">
+            <h3>CS188: Intro. to A.I. - Project 2: Multiagent Search </h3>
+            <p>This project focuses on finding the most optimal move for our pacman, assuming the ghost are also playing optimally :(. 
+                In order to do so, we have a game tree where we start in a starting state and branch down to possible other states where our pacman could take such as moving left or right. 
+                We also have states where the ghost takes moves instead. At the very end of this tree, we have terminal states (where the game ends) giving us a score. 
+                Thus, in our minimax algorithm we want to find the move that gives us the maximum utility value by maximizing “over the children of nodes controlled by Pacman, while minimizing over the children of nodes controlled by ghosts”. 
+                This process can take a long time and thus alpha-beta pruning is used in this project to help speed up the process. 
+                I also implemented expectimax, where it is useful if our adversarial agents have random behavior. 
+                Finally, an evaluation function was needed for estimating the true minimax value of that state. 
+                Overall, this project was pretty interesting conceptually where we build off a multi-agent algorithm and see how well we can optimize it or even estimate it based on our needs.
+            </p>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" target="_blank">GitHub Link</a>
+        </div>
+    </div>
+    
+</body>
+</html>
